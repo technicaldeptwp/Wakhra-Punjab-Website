@@ -1,0 +1,732 @@
+@import "tailwindcss";
+
+/* -------------------------
+   Base Styles (Light Mode)
+-------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff0b3; /* Punjabi golden yellow */
+  color: #000;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* -------------------------
+   Buttons
+-------------------------- */
+.btn-primary {
+  background-color: #800000;   /* brand-maroon */
+  color: #ffffff;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #dfd8af;   /* brand-gold */
+  color: #000;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background: transparent;
+  border: 2px solid #800000;
+  color: #800000;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #800000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* -------------------------
+   Section Spacing
+-------------------------- */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* -------------------------
+   Card Component
+-------------------------- */
+.card {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1.5px 4px rgba(0,0,0,0.06);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+/* -------------------------
+   Navbar
+-------------------------- */
+.navbar {
+  background-color: #ffffffb3;
+  color: #000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  backdrop-filter: blur(20px);
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar a {
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #800000; /* maroon hover in light mode */
+}
+
+/* -------------------------
+   About Card Hover Effect
+-------------------------- */
+.about-card {
+  transition: 0.3s ease;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(217, 187, 16, 0.517), 0 4px 6px rgba(203, 152, 22, 0.432);
+}
+
+/* -------------------------
+   Gallery Component
+-------------------------- */
+.gallery-item {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* -------------------------
+   Event Component
+-------------------------- */
+.event-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.2);
+}
+
+/* -------------------------
+   Team Component
+-------------------------- */
+.team-card {
+  background: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 14px rgba(255, 123, 0, 0.538);;
+}
+
+/* -------------------------
+   Timeline Component
+-------------------------- */
+.timeline-item {
+  border-left: 3px solid #800000;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  transition: border-color 0.5s ease;
+}
+.tagline{
+  color: #634200;
+}
+
+.about-intro{
+  font-size: large;
+}
+
+.next-event-card{
+  height: auto;
+  max-width: 70%;
+}
+
+.upcoming-card{
+  max-width: auto;
+  height: auto;
+}
+.card:hover,
+  .event-card:hover,
+  .team-card:hover,
+  .gallery-item:hover {
+    box-shadow: 0 10px 20px rgba(255, 145, 0, 0.35),
+                0 6px 12px rgba(255, 123, 0, 0.538);
+    transform: scale(1.05);
+  }
+/* -------------------------
+   Dark Mode
+-------------------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1B1B1B;
+    color: #e0e0e0;
+  }
+
+  /* Cards */
+  .card,
+  .event-card,
+  .team-card,
+  .gallery-item {
+    background: #1e1e1e;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  }
+
+  /* Hover glow effects */
+  .card:hover,
+  .event-card:hover,
+  .team-card:hover,
+  .gallery-item:hover {
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.35),
+                0 6px 12px rgba(255, 215, 0, 0.25);
+    transform: scale(1.05);
+  }
+
+  /* Sections */
+  .section {
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+  }
+
+  /* Navbar */
+  .navbar {
+    background-color: #1e1e1eb3;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .navbar a {
+    color: #e0e0e0;
+  }
+
+  .navbar a:hover {
+    color: #FFD700; /* gold hover in dark mode */
+  }
+
+  /* About */
+  .about-intro {
+    color: #cccccc;
+    font-size: large;
+  }
+
+  .about-card {
+    background-color: #2a2a2a;
+    color: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.6);
+  }
+
+  .about-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.35),
+                0 6px 12px rgba(255, 215, 0, 0.25);
+  }
+
+  /* Buttons */
+  .btn-primary:hover {
+    background-color: #FFD700;
+    color: #000;
+  }
+
+  .btn-outline {
+    border-color: #FFD700;
+    color: #FFD700;
+  }
+
+  .btn-outline:hover {
+    background-color: #FFD700;
+    color: #000;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    border-color: #FFD700;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    color: #FFD700;
+  }
+
+  p, span, li {
+    color: #d0d0d0;
+  }
+
+  .milestone-card{
+    background-color: #2A2A2A;
+  }
+  .tagline{
+    color: rgba(255, 255, 255, 0.921);
+  }
+}
+/* -------------------------
+   Flip Card Component
+-------------------------- */
+.flip-card {
+  perspective: 1000px;
+  display: inline-block;
+  transition: 3s ease;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  will-change: transform;
+  border-radius: 1rem;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  transition: 1s ease;
+
+  /* box-shadow: 0 10px 15px rgba(217, 187, 16, 0.517), 0 4px 6px rgba(203, 152, 22, 0.432); */
+}
+
+/* Front & Back Faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0; /* shorthand for top/left/right/bottom 0 */
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  pointer-events: none; /* prevents jitter/flicker on hover edges */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Front Face */
+.flip-card-front {
+  background: #fff;
+  color: #000;
+  transition: box-shadow 0.3s ease;
+}
+.flip-card:hover  .flip-card-front {
+  /* box-shadow: 0 10px 15px rgba(217, 187, 16, 0.517), 0 4px 6px rgba(203, 152, 22, 0.432); */
+  filter: 
+  drop-shadow(0  0 25px rgba(255, 123, 0, 0.538))
+  drop-shadow(0 4px 6px rgba(255, 123, 0, 0.538));
+
+}
+/* Back Face */
+.flip-card-back {
+  background: #fff0b3; /* soft yellow (light mode) */
+  color: #000;
+  transform: rotateY(180deg);
+  padding: 1rem;
+}
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .flip-card-front {
+    background: #1e1e1e;
+    color: #fff;
+  }
+
+  .flip-card-back {
+    background: #2b2b2b;
+    color: #e0e0e0;
+  }
+
+  .flip-card:hover  .flip-card-front {
+  /* box-shadow: 0 10px 15px rgba(217, 187, 16, 0.517), 0 4px 6px rgba(203, 152, 22, 0.432); */
+  filter: 
+  drop-shadow(0  0 25px rgba(255, 215, 0, 0.35))
+  drop-shadow(0 4px 6px rgba(255, 123, 0, 0.538));
+
+}
+}
+/* -------------------------
+   Flip Timer Styles - Complete Implementation
+-------------------------- */
+.flip-timer-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.flip-timer-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.flip-timer-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flip-timer-card-container {
+  position: relative;
+  width: 6rem;
+  height: 7rem;
+  perspective: 1000px;
+}
+
+.flip-timer-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-timer-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.flip-timer-front {
+  z-index: 1;
+}
+
+.flip-timer-flap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  z-index: 2;
+  background: #1a1a1a;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.flip-timer-top {
+  top: 0;
+  transform-origin: bottom;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+  background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+}
+
+.flip-timer-top-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.flip-timer-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.flip-timer-label {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.flip-timer-colon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  margin: 0 0.5rem;
+}
+
+.flip-timer-colon-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #800000;
+  margin: 1rem 0;
+  box-shadow: 0 0 5px rgba(128, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .flip-timer-card-container {
+    width: 5rem;
+    height: 6rem;
+  }
+  
+  .flip-timer-number {
+    font-size: 2.5rem;
+  }
+  
+  .flip-timer-colon {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-timer-container {
+    padding: 1rem;
+  }
+  
+  .flip-timer-display {
+    gap: 0.5rem;
+  }
+  
+  .flip-timer-card-container {
+    width: 4rem;
+    height: 5rem;
+  }
+  
+  .flip-timer-number {
+    font-size: 2rem;
+  }
+  
+  .flip-timer-label {
+    font-size: 0.7rem;
+  }
+  
+  .flip-timer-colon {
+    height: 5rem;
+    margin: 0 0.25rem;
+  }
+  
+  .flip-timer-colon-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.75rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .flip-timer-container {
+    padding: 0.75rem;
+  }
+  
+  .flip-timer-display {
+    gap: 0.25rem;
+  }
+  
+  .flip-timer-card-container {
+    width: 3.25rem;
+    height: 4rem;
+  }
+  
+  .flip-timer-number {
+    font-size: 1.75rem;
+  }
+  
+  .flip-timer-label {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+  }
+  
+  .flip-timer-colon {
+    height: 4rem;
+  }
+  
+  .flip-timer-colon-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0.6rem 0;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .flip-timer-container {
+    background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  }
+  
+  .flip-timer-face,
+  .flip-timer-flap {
+    background: #2a2a2a;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .flip-timer-top {
+    background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
+  }
+  
+  .flip-timer-label {
+    color: #ddd;
+  }
+}
+/* -------------------------
+   Past Events Scroll Styles
+-------------------------- */
+
+/* Scroll container */
+.past-events-scroll {
+  display: flex;
+  overflow: visible; /* Allow cards to overflow */
+  overflow-y: hidden;      /* prevent vertical overflow */
+  gap: 1.5rem;
+  padding: 1rem 3rem;       /* padding top/bottom for breathing */
+  scroll-behavior: smooth;
+  position: relative;
+  align-items: center;      /* vertically center cards */
+  scrollbar-width: none;    /* Firefox */
+}
+
+/* Hide scrollbar (Chrome, Safari, Edge) */
+.past-events-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Event card */
+.past-event-card {
+  flex-shrink: 0;
+  width: 16rem; /* same as w-64 */
+  border-radius: 1rem;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  position: relative;
+  z-index: 1;
+  transform-origin: center center;  /* scale from center */
+  overflow: hidden; /* ensures blur stays clipped */
+}
+
+/* Hover zoom — controlled scale so it stays in frame */
+.past-event-card:hover {
+  transform: scale(1.1);  
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 123, 0, 0.538);
+  /* border: 2px solid #FFD700; */
+}
+
+/* Inner content */
+.past-event-card img {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Frosted glass bottom overlay */
+.past-event-card .p-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.627); /* transparent dark layer */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-radius: 0 0 1rem 1rem;
+  color: #000000; /* keep text visible */
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .past-event-card {
+    background: #1a1a1a;
+  }
+
+  /* keep frosted glass effect in dark mode too */
+  .past-event-card .p-3 {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+
+  .past-event-card:hover {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+    border-color: #FFD700;
+  }
+}
+.black{
+  color: black;
+}
+/* Responsive image-lightbox for mobile */
+@media (max-width: 640px) {
+  .image-lightbox {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    z-index: 9999 !important;
+    background: rgba(0,0,0,0.95) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+/* in globals.css or index.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.image-lightbox{
+  height: 100% !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
