@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { computeEventState } from "../data";
 import Countdown from "./Countdown";       // Your Countdown component
-import "./countdown.css";                   // Countdown styles
+// import "./countdown.css";                   // Countdown styles
 
 // Helper to format dates nicely
 function formatDate(dateStr) {
