@@ -375,7 +375,7 @@ body {
   /* box-shadow: 0 10px 15px rgba(217, 187, 16, 0.517), 0 4px 6px rgba(203, 152, 22, 0.432); */
   filter: 
   drop-shadow(0  0 25px rgba(255, 215, 0, 0.35))
-  drop-shadow(0 4px 6px rgba(255, 123, 0, 0.538));
+  drop-shadow(0 4px 6px rgba(255, 215, 0, 0.35));
 
 }
 }

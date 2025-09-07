@@ -122,7 +122,7 @@ export default function Events() {
               style={{ marginLeft: "10px", marginRight: "10px" }}
             >
               <img
-                src={ev.img}
+                src={ev.images[0]}
                 alt={ev.title}
                 className="w-full h-40 object-cover rounded-t-2xl"
               />

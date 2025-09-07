@@ -25,11 +25,11 @@ export const milestones = [
 
 // ---------- Core Team ----------
 export const team = [
-  { name: "Hardik Chanana", role: "Chair-Person", bio: "Passionate about Punjabi culture and leadership.", img: "/src/assets/team/hc.png" },
-  { name: "Meher Mehta", role: "Vice Chair-Person", bio: "Bhangra performer and organizer of cultural fests.", img: "/src/assets/team/mm.png" },
-  { name: "Divya Sabharwal", role: "General Secretary", bio: "Writes about Punjabi traditions and language.", img: "/src/assets/team/ds.png" },
-  { name: "Anirudh Kaplish", role: "General Secretary", bio: "Leads the planning and execution of major events.", img: "/src/assets/team/a.png" }, // fixed leading slash
-  { name: "Anmol Anand Singh", role: "Joint Secretary", bio: "Leads the planning and execution of major events.", img: "/src/assets/team/aas.png" },
+  { name: "Hardik Chanana", role: "Chair-Person", bio: "Passionate about Punjabi culture and leadership.", img: "/Wakhra-Punjab-Website/public/assets/team/hc.png" },
+  { name: "Meher Mehta", role: "Vice Chair-Person", bio: "Bhangra performer and organizer of cultural fests.", img: "/Wakhra-Punjab-Website/public/assets/team/mm.png" },
+  { name: "Divya Sabharwal", role: "General Secretary", bio: "Writes about Punjabi traditions and language.", img: "/Wakhra-Punjab-Website/public/assets/team/ds.png" },
+  { name: "Anirudh Kaplish", role: "General Secretary", bio: "Leads the planning and execution of major events.", img: "/Wakhra-Punjab-Website/public/assets/team/a.png" },
+  { name: "Anmol Anand Singh", role: "Joint Secretary", bio: "Leads the planning and execution of major events.", img: "/Wakhra-Punjab-Website/public/assets/team/aas.png" },
 ];
 
 // ---------- Events (raw) ----------
@@ -38,22 +38,23 @@ export const nextEvent = {
   date: "2025-09-14T17:30:00", // YYYY-MM-DDTHH:mm:ss
   venue: "Student Parking Lot",
   description: "A mega celebration of Punjabi culture with music, dance, food stalls, and carnival vibes!",
-  img: "/src/assets/events/wakhra_carnival_banner.png", // keep existing asset to avoid 404s
+  img: "/Wakhra-Punjab-Website/public/assets/events/wakhra_carnival_banner.png",
   link: "https://eventhubcc.vit.ac.in/EventHub/",
 };
+
 // Faculty Coordinators
 export const faculty = [
   {
     name: "Dr. Rishikeshan C A",
     role: "Faculty Coordinator",
     bio: "Guides the club’s vision and cultural initiatives.",
-    img: "/src/assets/faculty/rishikeshan_sir.png",
+    img: "/Wakhra-Punjab-Website/public/assets/faculty/rishikeshan_sir.png",
   },
   {
     name: "Dr. Saurav Gupta",
     role: "Faculty Co-Coordinator",
     bio: "Supports event planning and student engagement.",
-    img: "/src/assets/faculty/saurav_sir.png",
+    img: "/Wakhra-Punjab-Website/public/assets/faculty/saurav_sir.png",
   },
 ];
 
@@ -63,7 +64,7 @@ export const upcomingEvents = [
     date: "2026-04-13T17:00:00",
     venue: "Main Ground",
     description: "Mark the harvest festival with vibrant performances and langar.",
-    img: "/src/assets/events/wakhra_carnival_banner.png",
+    img: "/Wakhra-Punjab-Website/public/assets/events/wakhra_carnival_banner.png",
     link: "https://eventhubcc.vit.ac.in/EventHub/",
   },
   {
@@ -71,93 +72,61 @@ export const upcomingEvents = [
     date: "2026-10-02T18:30:00",
     venue: "Auditorium",
     description: "An evening of soulful Punjabi shayari and folk music.",
-    img: "/src/assets/events/poetry.jpg",
+    img: "/Wakhra-Punjab-Website/public/assets/events/poetry.jpg",
     link: "https://eventhubcc.vit.ac.in/EventHub/",
   },
 ];
 
-// export const pastEvents = [
-//   { title: "Club Expo", date: "2025-07-18", img: "/src/assets/events/expo.jpg" },
-//   { title: "Sanjh 2.0", date: "2025-07-29", img: "/src/assets/events/sanjh.jpg" },
-//   { title: "Desi Videsi", date: "2025-02-28", img: "/src/assets/events/desi.jpg" },
-  
-// ].sort((a, b) => new Date(b.date) - new Date(a.date)); 
 export const pastEvents = [
   {
     title: "Club Expo",
     date: "2025-07-18",
     images: [
-      "/src/assets/events/expo.jpg",
-      "/src/assets/events/expo2.jpg",
-      "/src/assets/events/expo3.jpg"
+      "/Wakhra-Punjab-Website/public/assets/events/expo.jpg",
+      "/Wakhra-Punjab-Website/public/assets/events/expo2.jpg",
+      "/Wakhra-Punjab-Website/public/assets/events/expo3.jpg"
     ]
   },
   {
     title: "Sanjh 2.0",
     date: "2025-07-29",
     images: [
-      "/src/assets/events/sanjh.jpg",
-      "/src/assets/events/sanjh1.jpg",
-      "/src/assets/events/sanjh2.jpg"
+      "/Wakhra-Punjab-Website/public/assets/events/sanjh.jpg",
+      "/Wakhra-Punjab-Website/public/assets/events/sanjh1.jpg",
+      "/Wakhra-Punjab-Website/public/assets/events/sanjh2.jpg"
     ]
   },
   {
     title: "Desi Videsi",
     date: "2025-02-28",
     images: [
-      "/src/assets/events/desi.jpg",
-      "/src/assets/events/desi2.jpg",
-      "/src/assets/events/desi3.jpg"
+      "/Wakhra-Punjab-Website/public/assets/events/desi.jpg",
+      "/Wakhra-Punjab-Website/public/assets/events/desi2.jpg",
+      "/Wakhra-Punjab-Website/public/assets/events/desi3.jpg"
     ]
   },
-  {
-    title: "Club Expo",
-    date: "2025-07-18",
-    images: [
-      "/src/assets/events/expo.jpg",
-      "/src/assets/events/expo2.jpg",
-      "/src/assets/events/expo3.jpg"
-    ]
-  },
-  {
-    title: "Sanjh 2.0",
-    date: "2025-07-29",
-    images: [
-      "/src/assets/events/sanjh.jpg",
-      "/src/assets/events/sanjh1.jpg",
-      "/src/assets/events/sanjh2.jpg"
-    ]
-  },
-  {
-    title: "Desi Videsi",
-    date: "2025-02-28",
-    images: [
-      "/src/assets/events/desi.jpg",
-      "/src/assets/events/desi2.jpg",
-      "/src/assets/events/desi3.jpg"
-    ]
-  }
-].sort((a, b) => new Date(b.date) - new Date(a.date));
 
+
+].sort((a, b) => new Date(b.date) - new Date(a.date));
 
 // ---------- Culture Posts ----------
 export const culturePosts = [
   {
     title: "The Spirit of Bhangra",
     excerpt: "Bhangra is more than just a dance — it's the heartbeat of Punjab...",
-    img: "/src/assets/culture/bhangra.png",
+    img: "/Wakhra-Punjab-Website/public/assets/culture/bhangra.png",
     link: "https://en.wikipedia.org/wiki/Bhangra_(dance)",
   },
   {
     title: "Punjabi Cuisine Delights",
     excerpt: "From makki di roti to sarson da saag, Punjabi food is rich and soulful...",
-    img: "/src/assets/culture/food.jpg",
+    img: "/Wakhra-Punjab-Website/public/assets/culture/food.jpg",
     link: "https://en.wikipedia.org/wiki/Punjabi_cuisine",
   },
   {
     title: "Langar: Service with Love",
     excerpt: "Langar is the Sikh community kitchen that serves free meals to everyone, regardless of caste, religion, or background.",
-    img: "/src/assets/culture/Langar.jpg",
+    img: "/Wakhra-Punjab-Website/public/assets/culture/Langar.jpg",
     link: "https://en.wikipedia.org/wiki/Langar_(Sikhism)",
   },
 ];

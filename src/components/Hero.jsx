@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Banner Image */}
         <div className="banner w-full mt-16">
         <img
-          src="src\assets\banner-golden.png"
+          src="\Wakhra-Punjab-Website\public\assets\banner-golden.png"
           alt="Wakhra Punjab Banner"
           className="w-full object-cover"
         />
