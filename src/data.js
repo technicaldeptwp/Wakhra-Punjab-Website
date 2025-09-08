@@ -60,19 +60,19 @@ export const faculty = [
 
 export const upcomingEvents = [
   {
-    title: "Baisakhi Celebration",
-    date: "2026-04-13T17:00:00",
+    title: "Lohri Celebration",
+    date: "2026-01-13T17:00:00",
     venue: "Main Ground",
-    description: "Mark the harvest festival with vibrant performances and langar.",
-    img: "/Wakhra-Punjab-Website/assets/events/wakhra_carnival_banner.png",
+    description: "Lohri: Festival of bonfires, harvest, and togetherness.",
+    img: "/Wakhra-Punjab-Website/assets/events/lohri.jpg",
     link: "https://eventhubcc.vit.ac.in/EventHub/",
   },
   {
-    title: "Punjabi Poetry Night",
-    date: "2026-10-02T18:30:00",
-    venue: "Auditorium",
+    title: "Kite Carnival",
+    date: "2026-01-23T13:30:00",
+    venue: "Football Ground",
     description: "An evening of soulful Punjabi shayari and folk music.",
-    img: "/Wakhra-Punjab-Website/assets/events/poetry.jpg",
+    img: "/Wakhra-Punjab-Website/assets/events/kite.jpg",
     link: "https://eventhubcc.vit.ac.in/EventHub/",
   },
 ];
@@ -83,8 +83,8 @@ export const pastEvents = [
     date: "2025-07-18",
     images: [
       "/Wakhra-Punjab-Website/assets/events/expo.JPG",
-      "/Wakhra-Punjab-Website/assets/events/expo2.jpg",
-      "/Wakhra-Punjab-Website/assets/events/expo3.jpg"
+      "/Wakhra-Punjab-Website/assets/events/expo2.JPG",
+      "/Wakhra-Punjab-Website/assets/events/expo3.JPG"
     ]
   },
   {
@@ -93,7 +93,7 @@ export const pastEvents = [
     images: [
       "/Wakhra-Punjab-Website/assets/events/sanjh.jpg",
       "/Wakhra-Punjab-Website/assets/events/sanjh1.JPG",
-      "/Wakhra-Punjab-Website/assets/events/sanjh2.jpg"
+      "/Wakhra-Punjab-Website/assets/events/sanjh2. JPG"
     ]
   },
   {
