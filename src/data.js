@@ -82,7 +82,7 @@ export const pastEvents = [
     title: "Club Expo",
     date: "2025-07-18",
     images: [
-      "/Wakhra-Punjab-Website/assets/events/expo.jpg",
+      "/Wakhra-Punjab-Website/assets/events/expo.JPG",
       "/Wakhra-Punjab-Website/assets/events/expo2.jpg",
       "/Wakhra-Punjab-Website/assets/events/expo3.jpg"
     ]
