@@ -7,17 +7,14 @@ export default function Gallery() {
   const scrollRef = useRef(null);
   const modalRef = useRef(null);
 
+  // ✅ Fixed: load images directly from the clicked event
   const openLightbox = (ev) => {
-    const imagesForTitle = pastEvents
-      .filter((e) => e.title === ev.title)
-      .flatMap((e) =>
-        Array.isArray(e.images) && e.images.length ? e.images : [e.img]
-      )
-      .filter(Boolean);
+    const imagesForEvent =
+      Array.isArray(ev.images) && ev.images.length ? ev.images : [ev.img];
 
     setLightbox({
       title: ev.title,
-      images: imagesForTitle,
+      images: imagesForEvent,
       index: 0,
     });
   };
@@ -34,7 +31,7 @@ export default function Gallery() {
       lb ? { ...lb, index: (lb.index - 1 + lb.images.length) % lb.images.length } : lb
     );
 
-  // Handle ESC + click anywhere outside
+  // Handle ESC + outside click
   useEffect(() => {
     if (!lightbox) return;
 
@@ -45,15 +42,12 @@ export default function Gallery() {
     };
 
     const onClick = (e) => {
-      // close only if click is outside the modal
       if (modalRef.current && !modalRef.current.contains(e.target)) {
         close();
       }
     };
 
     document.addEventListener("keydown", onKey);
-
-    // Delay attaching the outside click listener so opening click doesn't trigger it
     const timer = setTimeout(() => {
       document.addEventListener("click", onClick);
     }, 0);
@@ -67,10 +61,12 @@ export default function Gallery() {
 
   // scroll gallery left/right
   const scrollLeft = () => {
-    if (scrollRef.current) scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    if (scrollRef.current)
+      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
   };
   const scrollRight = () => {
-    if (scrollRef.current) scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    if (scrollRef.current)
+      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
   };
 
   return (
@@ -125,12 +121,11 @@ export default function Gallery() {
       {/* Lightbox */}
       {lightbox && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-          {/* Modal content */}
           <div
             ref={modalRef}
             className="relative bg-neutral-900 rounded-xl shadow-xl w-[min(55vw,500px)] h-[min(45vh,400px)] flex flex-col overflow-hidden z-10"
           >
-            {/* Close button */}
+            {/* Close */}
             <button
               aria-label="Close"
               className="absolute right-3 top-2 w-6 h-6 rounded-full bg-black/60 hover:bg-black/80 text-white flex items-center justify-center"
@@ -144,7 +139,7 @@ export default function Gallery() {
               {lightbox.title}
             </div>
 
-            {/* Image area with arrows */}
+            {/* Image area */}
             <div className="flex-1 flex items-center justify-center relative overflow-hidden p-3">
               {lightbox.images.length > 1 && (
                 <button

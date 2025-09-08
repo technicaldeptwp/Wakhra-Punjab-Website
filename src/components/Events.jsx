@@ -45,7 +45,6 @@ export default function Events() {
         <h2 className="text-3xl font-heading text-center text-brand-maroon mb-8">
           Events
         </h2>
-
         {next && (
           <div className="mb-12 card next-event-card max-w-md">
             <img
