@@ -83,8 +83,8 @@ export const pastEvents = [
     date: "2025-07-18",
     images: [
       "/Wakhra-Punjab-Website/assets/events/expo.JPG",
-      "/Wakhra-Punjab-Website/assets/events/expo2.JPG",
-      "/Wakhra-Punjab-Website/assets/events/expo3.JPG"
+      "/Wakhra-Punjab-Website/assets/events/expo1.JPG",
+      "/Wakhra-Punjab-Website/assets/events/expo2.JPG"
     ]
   },
   {
@@ -93,7 +93,7 @@ export const pastEvents = [
     images: [
       "/Wakhra-Punjab-Website/assets/events/sanjh.jpg",
       "/Wakhra-Punjab-Website/assets/events/sanjh1.JPG",
-      "/Wakhra-Punjab-Website/assets/events/sanjh2. JPG"
+      "/Wakhra-Punjab-Website/assets/events/sanjh2.JPG"
     ]
   },
   {
