@@ -83,8 +83,8 @@ export const pastEvents = [
     date: "2025-07-18",
     images: [
       "/Wakhra-Punjab-Website/assets/events/expo.JPG",
-      "/Wakhra-Punjab-Website/assets/events/expo2.JPG",
-      "/Wakhra-Punjab-Website/assets/events/expo3.JPG"
+      "/Wakhra-Punjab-Website/assets/events/expo1.JPG",
+      "/Wakhra-Punjab-Website/assets/events/expo2.JPG"
     ]
   },
   {
