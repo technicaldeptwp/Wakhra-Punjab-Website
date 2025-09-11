@@ -93,7 +93,7 @@ export const pastEvents = [
     images: [
       "/Wakhra-Punjab-Website/assets/events/sanjh.jpg",
       "/Wakhra-Punjab-Website/assets/events/sanjh1.JPG",
-      "/Wakhra-Punjab-Website/assets/events/sanjh2. JPG"
+      "/Wakhra-Punjab-Website/assets/events/sanjh2.JPG"
     ]
   },
   {
