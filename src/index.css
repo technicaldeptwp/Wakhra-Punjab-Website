@@ -722,6 +722,7 @@ body {
 
 /* Album Card */
 .album-card {
+  position: relative;
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
@@ -741,20 +742,29 @@ body {
   display: block;
 }
 
+/* Album Info Blur (event name bar) */
 .album-info {
-  padding: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.6rem;
   text-align: center;
+  color: #fff;
+  font-weight: 500;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
-.album-info h3 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-}
-
+.album-info h3,
 .album-info p {
-  font-size: 0.875rem;
-  color: #666;
+  margin: 0;
+  color: #fff;
 }
 
 /* ============================= */
@@ -764,21 +774,26 @@ body {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.9); /* solid, no blur */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 60;
-  flex-direction: column;
+  z-index: 100;
   padding: 1rem;
+  flex-direction: column;
 }
 
 .lightbox-img {
-  max-width: 100%;
-  max-height: 80vh; /* always contained inside black area */
+  max-width: 92vw;  /* wider on laptop */
+  max-height: 85vh;
   object-fit: contain;
   border-radius: 10px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0; /* hidden until loaded */
+}
+
+.lightbox-img.loaded {
+  opacity: 1;
 }
 
 /* Caption */
@@ -799,7 +814,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 70;
+  z-index: 110;
 }
 
 .nav-btn {
@@ -812,7 +827,7 @@ body {
   border: none;
   cursor: pointer;
   padding: 0 0.5rem;
-  z-index: 70;
+  z-index: 110;
   user-select: none;
 }
 
@@ -824,7 +839,7 @@ body {
   right: 1rem;
 }
 
-/* Hide scrollbar (for smoother feel) */
+/* Hide scrollbar */
 .lightbox::-webkit-scrollbar,
 .gallery-grid::-webkit-scrollbar {
   display: none;
@@ -841,6 +856,7 @@ body {
 
 @media (max-width: 1024px) {
   .lightbox-img {
+    max-width: 95vw;
     max-height: 75vh;
   }
 }
@@ -856,7 +872,7 @@ body {
   }
 
   .album-card {
-    margin: 0 0.25rem; /* spacing so cards don’t hit screen edges */
+    margin: 0 0.25rem;
   }
 
   .lightbox-img {
@@ -867,6 +883,11 @@ body {
 @media (max-width: 480px) {
   .album-cover {
     height: 140px;
+  }
+
+  .album-card {
+    width: 92%; /* leave space around edges */
+    margin: 0 auto;
   }
 
   .lightbox-img {

@@ -191,35 +191,44 @@
 // }
 // src/components/Gallery.jsx
 // src/components/Gallery.jsx
+// src/components/Gallery.jsx
 import { useState, useEffect, useRef } from "react";
 import { pastEvents } from "../data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Gallery() {
   const [lightbox, setLightbox] = useState(null);
+  const [fade, setFade] = useState(false);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  // Open album lightbox
   const openLightbox = (event) => {
     setLightbox({ ...event, index: 0 });
+    setFade(true);
   };
 
   const closeLightbox = () => setLightbox(null);
 
   const next = () =>
-    setLightbox((lb) =>
-      lb ? { ...lb, index: (lb.index + 1) % lb.images.length } : lb
-    );
+    setLightbox((lb) => {
+      if (!lb) return lb;
+      setFade(false);
+      setTimeout(() => setFade(true), 50);
+      return { ...lb, index: (lb.index + 1) % lb.images.length };
+    });
 
   const prev = () =>
-    setLightbox((lb) =>
-      lb
-        ? { ...lb, index: (lb.index - 1 + lb.images.length) % lb.images.length }
-        : lb
-    );
+    setLightbox((lb) => {
+      if (!lb) return lb;
+      setFade(false);
+      setTimeout(() => setFade(true), 50);
+      return {
+        ...lb,
+        index: (lb.index - 1 + lb.images.length) % lb.images.length,
+      };
+    });
 
-  // Keyboard navigation
+  // Keyboard support
   useEffect(() => {
     if (!lightbox) return;
     const onKey = (e) => {
@@ -231,19 +240,16 @@ export default function Gallery() {
     return () => window.removeEventListener("keydown", onKey);
   }, [lightbox]);
 
-  // Touch gestures (swipe for iPhones & mobiles)
+  // Touch gestures
   const handleTouchStart = (e) => {
     touchStartX.current = e.changedTouches[0].screenX;
   };
 
   const handleTouchEnd = (e) => {
     touchEndX.current = e.changedTouches[0].screenX;
-    if (!touchStartX.current || !touchEndX.current) return;
-
     const diff = touchStartX.current - touchEndX.current;
     if (Math.abs(diff) > 50) {
-      if (diff > 0) next(); // swipe left → next
-      else prev(); // swipe right → prev
+      diff > 0 ? next() : prev();
     }
   };
 
@@ -262,6 +268,8 @@ export default function Gallery() {
               alt={event.title}
               className="album-cover"
               loading="lazy"
+              width="400"
+              height="250"
               draggable="false"
             />
             <div className="album-info">
@@ -279,12 +287,12 @@ export default function Gallery() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Close Button */}
+          {/* Close */}
           <button className="close-btn" onClick={closeLightbox}>
             &times;
           </button>
 
-          {/* Prev Button */}
+          {/* Prev */}
           {lightbox.images.length > 1 && (
             <button
               className="nav-btn left"
@@ -297,17 +305,19 @@ export default function Gallery() {
             </button>
           )}
 
-          {/* Image */}
+          {/* Image with fade */}
           <img
             src={lightbox.images[lightbox.index]}
             alt={`${lightbox.title} ${lightbox.index + 1}`}
-            className="lightbox-img"
+            className={`lightbox-img ${fade ? "fade-in" : "fade-out"}`}
             loading="lazy"
+            width="1200"
+            height="800"
             draggable="false"
-            onClick={(e) => e.stopPropagation()} // prevent close when clicking image
+            onClick={(e) => e.stopPropagation()}
           />
 
-          {/* Next Button */}
+          {/* Next */}
           {lightbox.images.length > 1 && (
             <button
               className="nav-btn right"
