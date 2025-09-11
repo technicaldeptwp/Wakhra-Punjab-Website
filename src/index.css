@@ -730,3 +730,35 @@ body {
   width: auto !important;
   object-fit: contain !important;
 }
+/* Masonry layout */
+.masonry {
+  column-count: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 640px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Prevent child elements from breaking weirdly */
+.masonry > * {
+  break-inside: avoid;
+}
+
+/* Brand theme */
+.text-gold {
+  color: #FFD700;
+}
+.bg-gold {
+  background-color: #FFD700;
+}
+.hover\:text-gold:hover {
+  color: #FFD700;
+}
+
